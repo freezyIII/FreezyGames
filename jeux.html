@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreezyGames - Jeux</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+<div class="container">
+<div class="logo">FreezyGames</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Accueil</a></li>
+<li><a href="jeux.html">Jeux</a></li>
+<li><a href="about.html">À propos</a></li>
+</ul>
+
+<form id="search-form" class="search-form" onsubmit="event.preventDefault(); filterGames();">
+<input type="text" id="search-input" placeholder="Rechercher un jeu..."  autocomplete="off" /></form></div></header>
+
+<section class="games">
+<h2>Jeux à télécharger</h2>
+
+<div class="games-wrapper">
+<div class="games-grid">
+<div class="game-card"><a href="https://www.clictune.com/k0Kz"><div class="game-image" style="background-image: url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/977950/header.jpg?t=1734406213');"><div class="game-name">A Dance of Fire and Ice (v2.7.0)</div></div></a></div>
+<div class="game-card"><a href="https://www.clictune.com/k0KJ"><div class="game-image" style="background-image: url('https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/17410/header.jpg?t=1731356346');"><div class="game-name">Mirror's Edge (v1.0.1.0)</div></div></a></div>
+<div class="game-card"><a href="https://www.dlink4.com/jZTd"><div class="game-image" style="background-image: url('https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/648800/header.jpg?t=1727184011');"><div class="game-name">Raft (v1.09)</div></div></a></div>
+</div></div></div></section>
+
+
+
+<script>
+    function filterGames() {
+      const searchInput = document.getElementById("search-input").value.trim(); // trim() pour enlever les espaces
+      const gameCards = document.querySelectorAll(".game-card");
+  
+      // Si l'input est vide, afficher une alerte
+      if (searchInput === "") {
+        alert("Veuillez entrer un terme de recherche.");
+        return; // Stoppe la fonction si le champ est vide
+      }
+  
+      // Filtrage des jeux si l'input n'est pas vide
+      gameCards.forEach(card => {
+        const gameName = card.querySelector(".game-name").textContent.toLowerCase();
+        if (gameName.includes(searchInput.toLowerCase())) {
+          card.style.display = "block"; // Afficher le jeu
+        } else {
+          card.style.display = "none"; // Masquer le jeu
+        }
+      });
+  
+      // Réinitialiser l'input après la recherche (facultatif)
+      document.getElementById("search-input").value = "";
+    }
+  </script>
+  
+  
+  
+</body>
+</html>
