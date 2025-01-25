@@ -3,7 +3,7 @@ name: Python Selenium Script
 on:
   push:
     branches:
-      - main
+      - main  # ou 'master' selon la branche sur laquelle tu travailles
 
 jobs:
   selenium_job:
@@ -28,4 +28,4 @@ jobs:
       run: |
         python3 script.py
       env:
-        DISPLAY: :99
+        DISPLAY: :99  # Cela permet de faire tourner Chrome en mode headless
