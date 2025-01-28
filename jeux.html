@@ -74,6 +74,17 @@
 
     document.getElementById("search-input").value = "";
   }
+
+  document.querySelector('.btn-jeux').addEventListener('click', function() {
+    document.querySelector('.info-box-jeux').classList.add('open');
+    document.querySelector('.info-overlay-jeux').classList.add('open');
+});
+
+document.querySelector('.close-info-jeux').addEventListener('click', function() {
+    document.querySelector('.info-box-jeux').classList.remove('open');
+    document.querySelector('.info-overlay-jeux').classList.remove('open');
+});
+
 </script>
 
 </body>
