@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreezyGames - Logiciels</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+<div class="container">
+<div class="logo">FreezyGames</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Accueil</a></li>
+<li><a href="jeux.html">Jeux</a></li>
+<li><a href="logiciels.html">Logiciels</a></li>
+<li><a href="aide.html">Aide</a></li>
+</ul>
+
+<a href="https://discord.gg/c9PaQguCdj" target="_blank" class="btn-jeux">Demande de Logiciels</a>
+
+<form id="search-form" class="search-form" onsubmit="event.preventDefault(); filterGames();">
+<input type="text" id="search-input" placeholder="Rechercher un jeu..."  autocomplete="off" /></form></div></header>
+
+<section class="games">
+<h2>Logiciels à télécharger</h2>
+
+
+<!-- 
+<div class="game-card"><a href="" target="_blank"><div class="game-image" style="background-image: url('');"><div class="game-name"></div></div></a></div> 
+-->
+
+<div class="games-wrapper">
+<div class="games-grid">
+
+</div></div></div></section>
+
+<script>
+  function filterGames() {
+    const searchInput = document.getElementById("search-input").value.trim();
+    const gameCards = document.querySelectorAll(".game-card");
+
+    if (searchInput === "") {
+      alert("Veuillez entrer un terme de recherche.");
+      return;
+    }
+
+    gameCards.forEach(card => {
+      const gameName = card.querySelector(".game-name").textContent.toLowerCase();
+      if (gameName.includes(searchInput.toLowerCase())) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    document.getElementById("search-input").value = "";
+  }
+
+  document.querySelector('.btn-jeux').addEventListener('click', function() {
+    document.querySelector('.info-box-jeux').classList.add('open');
+    document.querySelector('.info-overlay-jeux').classList.add('open');
+});
+
+document.querySelector('.close-info-jeux').addEventListener('click', function() {
+    document.querySelector('.info-box-jeux').classList.remove('open');
+    document.querySelector('.info-overlay-jeux').classList.remove('open');
+});
+
+</script>
+
+</body>
+</html>
