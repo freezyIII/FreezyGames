@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ - FreezyGames</title>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<header class="header">
+<div class="container">
+<div class="logo">FreezyGames</div>
+<ul class="nav-links">
+<li><a href="index.html">Accueil</a></li>
+<li><a href="jeux.html">Jeux</a></li>
+<li><a href="aide.html">Aide</a></li>
+</ul></div></header>
+
+<section class="faq">
+<h2>Multijoueur</h2>
+<div class="faq-item">
+<div class="faq-question">1. Comment rejoindre mon ami sur un jeu ?</div>
+<div class="faq-answer">Pour rejoindre votre ami sur un jeu, vous aurez besoin de Steam ou Xbox. Sur Steam, ouvrez le jeu, appuyez sur Shift + Tab, trouvez votre ami et faites un clic droit pour sélectionner "Inviter dans le jeu" ou "Rejoindre le jeu". Sur Xbox, ouvrez l'application, allez dans la liste d'amis, faites un clic droit sur son profil pour l'inviter, ou utilisez le raccourci Windows + G pour ouvrir la Xbox Game Bar.</div></div>
+
+<div class="faq-item">
+<div class="faq-question">2. Peut-on jouer en multijoueur avec d'autres joueurs ?</div>
+<div class="faq-answer">Oui, il est possible que votre jeu propose un mode multijoueur, mais vous ne pourrez jouer qu'avec des personnes ayant également le même crack que vous.</div></div>
+</section>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+    const answer = question.nextElementSibling;
+    const faqItem = question.closest('.faq-item');
+
+    document.querySelectorAll('.faq-answer').forEach(item => {
+      if (item !== answer) {
+        item.style.display = 'none';
+      }
+    });
+
+    const isAnswerOpen = answer.style.display === 'block';
+    answer.style.display = isAnswerOpen ? 'none' : 'block';
+    
+    if (!isAnswerOpen) {
+      faqItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+});
+
+
+</script>
+
+</body>
+</html>
