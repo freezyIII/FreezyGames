@@ -49,94 +49,13 @@ h2 {font-size: 2.5rem;color: #f04e31;margin: 2rem 0;text-align: center;}
 .faq-question {font-size: 1.5rem;color: #f04e31;cursor: pointer;padding: 1rem 0;transition: color 0.3s;}
 .faq-question:hover {color: #c03e29;}
 .faq-answer {display: none;font-size: 1rem;color: #fff;padding: 0.5rem 0;}
-
-
-/* Styles pour le bouton Infos */
-.btn-info {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.8rem 1.5rem;
-  background-color: #f04e31;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.btn-info:hover {
-  background-color: #c03e29;
-  transform: translateY(-5px);
-}
-
-.info-box {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  background: #2a2a2a;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  color: #fff;
-  width: 70%;
-  max-width: 700px;
-  height: 300px;
-  opacity: 0;
-  visibility: hidden;
-  transition: transform 0.5s ease, opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 100;
-}
-
-.info-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 99;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none; /* Désactive les interactions sur l'overlay */
-}
-
-.info-box.open {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  visibility: visible;
-}
-
-.info-overlay.open {
-  visibility: visible;
-  opacity: 1;
-}
-
-.info-content h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #f04e31;
-}
-
-.info-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-/* Styles pour la croix de fermeture */
-.close-info {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 2rem;
-  color: #f04e31;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.close-info:hover {
-  color: #c03e29;
-}
+.btn-info {position: absolute;top: 1rem;right: 1rem;padding: 0.8rem 1.5rem;background-color: #f04e31;color: #fff;border: none;border-radius: 5px;font-size: 1.2rem;cursor: pointer;transition: background 0.3s, transform 0.3s;}
+.btn-info:hover {background-color: #c03e29;transform: translateY(-5px);}
+.info-box {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%) scale(0);background: #2a2a2a;padding: 2rem;border-radius: 10px;box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);color: #fff;width: 70%;max-width: 700px;height: 300px;opacity: 0;visibility: hidden;transition: transform 0.5s ease, opacity 0.3s ease, visibility 0.3s ease;z-index: 100;}
+.info-overlay {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.5);z-index: 99;visibility: hidden;opacity: 0;transition: opacity 0.3s ease;pointer-events: none;}
+.info-box.open {transform: translate(-50%, -50%) scale(1);opacity: 1;visibility: visible;}
+.info-overlay.open {visibility: visible;opacity: 1;}
+.info-content h3 {font-size: 2rem;margin-bottom: 1rem;color: #f04e31;}
+.info-content p {font-size: 1.2rem;margin-bottom: 2rem;}
+.close-info {position: absolute;top: 1rem;right: 1rem;font-size: 2rem;color: #f04e31;cursor: pointer;transition: color 0.3s;}
+.close-info:hover {color: #c03e29;}
