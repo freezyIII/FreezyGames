@@ -111,6 +111,42 @@ document.querySelector('.close-info-jeux').addEventListener('click', function() 
     document.querySelector('.info-overlay-jeux').classList.remove('open');
 });
 
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const gamesContainer = document.querySelector(".games-grid");
+    let gamesLoaded = 0;
+    const gamesPerBatch = 6; // Nombre de jeux chargés par scroll
+
+    function loadGames() {
+        for (let i = 0; i < gamesPerBatch; i++) {
+            if (gamesLoaded >= games.length) return; // Stop si tous les jeux sont chargés
+            
+            const game = games[gamesLoaded];
+            const gameCard = document.createElement("div");
+            gameCard.classList.add("game-card");
+
+            gameCard.innerHTML = `
+                <a href="${game.link}" target="_blank">
+                    <div class="game-image" style="background-image: url('${game.image}');">
+                        <div class="game-name">${game.name}</div>
+                    </div>
+                </a>
+            `;
+            gamesContainer.appendChild(gameCard);
+            gamesLoaded++;
+        }
+    }
+
+    function handleScroll() {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
+            loadGames();
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    loadGames(); // Charger la première série de jeux
+});
+
 </script>
 
 </body>
