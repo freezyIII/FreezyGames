@@ -110,25 +110,7 @@ document.querySelector('.close-info-jeux').addEventListener('click', function() 
     document.querySelector('.info-box-jeux').classList.remove('open');
     document.querySelector('.info-overlay-jeux').classList.remove('open');
 });
-
-
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const games = document.querySelectorAll(".game-card");
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
-        });
-    }, {
-        threshold: 0.2 // Active l'animation quand 20% de l'élément est visible
-    });
-
-    games.forEach(game => observer.observe(game));
-});
-
+  
 </script>
 
 </body>
