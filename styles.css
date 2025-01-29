@@ -23,13 +23,7 @@ body { font-family: 'Poppins', sans-serif; background: #121212; color: #fff; lin
 .games h2 { margin-bottom: 2rem; font-size: 2.5rem; color: #f04e31; }
 .games-wrapper { background: #1e1e1e; padding: 1.5rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); width: 100%; max-width: 1500px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; }
 .games-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; justify-items: center; justify-content: center; width: 100%; }
-.game-card { width: 100%; max-width: 100%; position: relative; border-radius: 10px; overflow: visible; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;}
-.game-card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+.game-card { width: 100%; max-width: 100%; position: relative; border-radius: 10px; overflow: visible; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); }
 .game-icon { position: absolute; bottom: 10px; right: 10px; width: 30px; height: auto; }
 .game-image { aspect-ratio: 18 / 9; border-radius: 10px; background-size: cover; background-position: center; transition: transform 0.3s, box-shadow 0.3s; width: 100%; object-fit: cover; position: relative; }
 .game-image:hover { transform: scale(1.05); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); }
