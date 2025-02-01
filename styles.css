@@ -21,7 +21,7 @@ body { font-family: 'Poppins', sans-serif; background: #121212; color: #fff; lin
 .btn-primary:hover { background: #c03e29; transform: translateY(-5px); }
 .games { padding: 3rem 0; text-align: center; }
 .games h2 { margin-bottom: 2rem; font-size: 2.5rem; color: #f04e31; }
-.games-wrapper { background: #1e1e1e; padding: 1.5rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); width: 100%; max-width: 1500px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; }
+.games-wrapper { background: #1e1e1e; padding: 1.5rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); width: 100%; max-width: 110px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; }
 .games-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; justify-items: center; justify-content: center; width: 100%; }
 .game-card { width: 100%; max-width: 100%; position: relative; border-radius: 10px; overflow: visible; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); }
 .game-icon { position: absolute; bottom: 10px; right: 10px; width: 30px; height: auto; }
