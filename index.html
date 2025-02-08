@@ -22,11 +22,7 @@
 </a></li>
 <li><a href="logiciels.html">Logiciels</a></li>
 <li><a href="aide.html">Aide</a></li>
-</ul><button class="btn-info">Infos</button></div></header>
-
-<div class="info-box"><span class="close-info">&times;</span><div class="info-content">
-<h3>Information importante</h3>
-<p>Cette application génère des revenus lorsqu'elle est ouverte et en fonctionnement. Conçue par mes soins pour me soutenir sans aucune action de votre part, elle me permet de vous offrir une large sélection de jeux. En contrepartie, vous pouvez économiser des centaines, voire des milliers d'euros, en jeux, sans aucune limite ! Merci à ceux qui reviendront régulièrement pour en profiter.</p></div></div>
+</ul></div></header>
 
 <section id="hero" class="hero">
 <div class="hero-content">
@@ -52,29 +48,5 @@
 <h4>Jeux de qualité</h4>
 <p>Des jeux divertissants et de qualité supérieure.</p></div></div></div></section>
 
-<script>
-    const btnInfo = document.querySelector('.btn-info');
-    const infoBox = document.querySelector('.info-box');
-    const closeInfo = document.querySelector('.close-info');
-    const overlay = document.querySelector('.info-overlay');
-
-    btnInfo.addEventListener('click', () => {
-        infoBox.classList.add('open');
-        overlay.classList.add('open');
-    });
-
-    closeInfo.addEventListener('click', () => {
-        infoBox.classList.remove('open');
-        overlay.classList.remove('open');
-    });
-
-    overlay.addEventListener('click', () => {
-        infoBox.classList.remove('open');
-        overlay.classList.remove('open');
-    });
-</script>
-
-
-</script>
 </body>
 </html>
